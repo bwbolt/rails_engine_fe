@@ -3,6 +3,10 @@ class EngineService
     get_url('https://bulk-discounts-api.herokuapp.com/api/v1/merchants')
   end
 
+  def self.get_items
+    get_url('https://bulk-discounts-api.herokuapp.com/api/v1/items')
+  end
+
   def self.get_merchants_items(id)
     get_url("https://bulk-discounts-api.herokuapp.com/api/v1/merchants/#{id}/items")
   end

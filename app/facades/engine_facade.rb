@@ -4,6 +4,11 @@ class EngineFacade
     merchants = json[:data].map { |data| Merchant.new(data) }
   end
 
+  def self.create_items
+    json = EngineService.get_items
+    items = json[:data].map { |data| Item.new(data) }
+  end
+
   def self.create_single_merchant(id)
     json = EngineService.get_single_merchant(id)
     merchant = Merchant.new(json[:data])
